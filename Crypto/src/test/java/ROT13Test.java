@@ -61,15 +61,22 @@ public class ROT13Test {
 
         // When
         String actual = cipher.encrypt(Q1);
-        System.out.println(Q1);
-        System.out.println(A1);
+        System.out.println ("actual:"+ actual);
+
+//        System.out.println(Q1);
+        System.out.println("expected:" + A1);
         // Then
         assertTrue(actual.equals(A1));
 
         // When
         String actual2 = cipher.decrypt(Q2);
-        System.out.println(Q2);
-        System.out.println(A2);
+        System.out.println ("actual" + actual);
+        System.out.println ("expected"+ A2);
+
+
+
+//        System.out.println(Q2);
+//        System.out.println(A2);
         // Then
         assertTrue(actual2.equals(A2));
     }
@@ -79,11 +86,11 @@ public class ROT13Test {
         ROT13 cipher = new ROT13('a', 'n');
 
         String Q1 = "Why did the chicken cross the road?";
-        System.out.println(Q1);
-
+//        System.out.println(Q1);
         // When
         String actual = cipher.crypt(cipher.crypt(Q1));
-        System.out.println(actual);
+        System.out.println("actual" + actual);
+        System.out.println("expected" + Q1);
         // Then
         assertTrue(actual.equals(Q1));
     }
